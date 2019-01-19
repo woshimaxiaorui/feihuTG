@@ -6,6 +6,7 @@ window.onload = function(){
 	if(flag_register != -1){
 		$("#register_div").addClass("show").siblings().removeClass("show");
 		$(".yzm span").html(getYz()).css({"color":getRandColor()});
+		
 	}else{
 		$("#login_div").addClass("show").siblings().removeClass("show");
 	}
@@ -20,7 +21,7 @@ window.onload = function(){
 		var reg = /^[a-zA-Z0-9_-]{4,16}$/;
 		if(reg.test(txt)){
 			flagRegisterUname = true;
-			$("#s1").html("ok").css("color","green");
+			$("#s1").html("Ok").css("color","green");
 		}else{
 			flagRegisterUname = false;
 			$("#s1").html("格式：4到16位（字母，数字，下划线，减号）").css("color","red");
@@ -30,11 +31,11 @@ window.onload = function(){
 	var flagRegisterUpass = null;
 	$("#register_upass").blur(function(){
 		var txt = $(this).val();
-		////密码强度正则，6到18位
+		////密码正则，6到18位
 		var reg = /^.{6,18}$/;
 		if(reg.test(txt)){
 			flagRegisterUpass = true;
-			$("#s2").html("ok").css("color","green");
+			$("#s2").html("Ok").css("color","green");
 		}else{
 			flagRegisterUpass = false;
 			$("#s2").html("格式：6到18位字符").css("color","red");
@@ -48,7 +49,7 @@ window.onload = function(){
 		var txt2 = $("#register_upass").val();
 		if(txt == txt2 && txt2 != ""){
 			flagRegisterUpass2 = true;
-			$("#s3").html("ok").css("color","green");
+			$("#s3").html("Ok").css("color","green");
 		}else{
 			flagRegisterUpass2 = false;
 			$("#s3").html("格式：两次输入的密码不一致").css("color","red");
@@ -61,7 +62,7 @@ window.onload = function(){
 		var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 		if(reg.test(txt)){
 			flagRegisterUemail = true;
-			$("#s4").html("ok").css("color","green");
+			$("#s4").html("Ok").css("color","green");
 		}else{
 			flagRegisterUemail = false;
 			$("#s4").html("邮箱格式不正确").css("color","red");
@@ -75,10 +76,10 @@ window.onload = function(){
 		//验证码是否匹配
 		var txt2 = $(".yzm span").html();
 		if(txt2 == txt){
-			flagRegisterUemail = true;
-			$("#s5").html("ok").css("color","green");
+			flagRegisterYz = true;
+			$("#s5").html("Ok").css("color","green");
 		}else{
-			flagRegisterUemail = false;
+			flagRegisterYz = false;
 			$("#s5").html("验证码不正确").css("color","red");
 		}
 	})
@@ -97,4 +98,57 @@ window.onload = function(){
 		}
 		return str;
 	}
+	
+	
+	
+	// 注册，存入cookie
+	$("#register_btn").click(function(){
+		if( flagRegisterUname && flagRegisterUpass &&flagRegisterUpass2&&flagRegisterUemail && flagRegisterYz){
+			var uname = $("#register_uname").val();
+			var upass = $("#register_upass").val();
+			console.log(uname,upass)
+			setCookieUtil(uname, upass);
+			location.href = "login.html";
+		}
+	})
+	
+	// 登录部分
+	// 验证登录信息
+	var flagLuname = false;
+	$("#login_uname").blur(function(){
+		var txt = $(this).val();
+		//用户名正则，4到16位（字母，数字，下划线，减号）
+		var reg = /^[a-zA-Z0-9_-]{4,16}$/;
+		if(reg.test(txt)){
+			$("#login_s1").html("OK").css("color","green");
+			flagLuname = true;
+		}else{
+			$("#login_s1").html("必填").css("color","red");
+			flagLuname = false;
+		}
+	})
+	var flagLupass = false;
+	$("#login_upass").blur(function(){
+		var txt = $(this).val();
+		//用户名正则，4到16位（字母，数字，下划线，减号）
+		var reg = /^.{6,18}$/;;
+		if(reg.test(txt)){
+			$("#login_s2").html("OK").css("color","green");
+			flagLupass = true;
+		}else{
+			$("#login_s2").html("必填").css("color","red");
+			flagLupass = false;
+		}
+	})
+	
+	$("#submit_login").click(function(){
+		if(flagLupass && flagLuname){
+			var uname = $("#login_uname").val();
+			var upass = $("#login_upass").val();
+			if(getCookieUtil(uname) == upass){
+				location.href = "index.html?uname="+uname;
+			}
+		}
+	})
+	
 }

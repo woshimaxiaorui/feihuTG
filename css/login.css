@@ -12,6 +12,8 @@ html,body{height: 100%;background: #fff;}
 #login_form form p a{font-size: 12px;}
 #login_form form p a:hover{color: red;}
 #login_form form p input{width: 208px;height: 24px;border: 1px solid #ccc;margin-left: 10px;padding-left: 4px;outline: none;}
+#login_s2,#login_s1{position: absolute;}
+
 #login_form form p #submit_login{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;margin-left: 60px;margin-top: 8px;color: lavenderblush;}
 #login_form form p #submit_register{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;color: lavenderblush;}
 .form_foot {margin-top: 24px;}

@@ -19,9 +19,9 @@ function getCookieUtil(key){
 //根据key,value值存入cookie
 function setCookieUtil(key,value,day){
 	if(day){
-		var now = new Date();
-		now.setData(now.getDate()+day);
-		document.cookie = `${key}=${value};expiser=${now}`;
+		var nowtime = new Date();
+		nowtime.setData(nowtime.getDate()+day);
+		document.cookie = `${key}=${value};expiser=${nowtime}`;
 	}else{
 		document.cookie = `${key}=${value}`;
 	}

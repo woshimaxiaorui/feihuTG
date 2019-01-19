@@ -1,42 +1,51 @@
-
-
-$("#myAccount").hover(function(){
-	console.log($("#myAccount_list"));
-	$("#myAccount_list").css("display","block").addClass("account");
-	$(this).addClass("account");
-},function(){
-	$("#myAccount_list").css("display","none");
-	$(this).removeClass("account");
-})
-$("#myAccount_list").on("mouseenter","li",function(){
-	$("#myAccount_list").css("display","block").addClass("account");
-	$("#myAccount").addClass("account");
-})
-$("#myAccount_list").on("mouseleave","li",function(){
-	$("#myAccount_list").css("display","none");
-	$("#myAccount").removeClass("account");
-})
-$("#map").hover(function(){
-	// console.log($("#myAccount_list"));
-	$("#map_list").css("display","block").addClass("account");
-	$(this).addClass("account");
-},function(){
-	$("#map_list").css("display","none");
-	$(this).removeClass("account");
-})
-$("#map_list").on("mouseenter","li",function(){
-	$("#map_list").css("display","block").addClass("account");
-	$("#map").addClass("account");
-})
-$("#map_list").on("mouseleave","li",function(){
-	$("#map_list").css("display","none");
-	$("#map").removeClass("account");
-})
-
-
-
-
 window.onload = function(){
+
+	var url = window.location.href;
+	var flag_login = url.indexOf("uname");
+	var index_num = url.indexOf("=");
+	if(flag_login != -1){
+		var utxt = url.substr(index_num + 1,url.length);
+		
+		var str = utxt+"您好，欢迎访问飞虎 <a href='login.html'>退出</a>";
+		$("#login_show").html(str);
+		$('a[href|="index.html"]').attr("href","index.html?uname="+utxt);
+	}
+	
+	
+	
+	$("#myAccount").hover(function(){
+		console.log($("#myAccount_list"));
+		$("#myAccount_list").css("display","block").addClass("account");
+		$(this).addClass("account");
+	},function(){
+		$("#myAccount_list").css("display","none");
+		$(this).removeClass("account");
+	})
+	$("#myAccount_list").on("mouseenter","li",function(){
+		$("#myAccount_list").css("display","block").addClass("account");
+		$("#myAccount").addClass("account");
+	})
+	$("#myAccount_list").on("mouseleave","li",function(){
+		$("#myAccount_list").css("display","none");
+		$("#myAccount").removeClass("account");
+	})
+	$("#map").hover(function(){
+		// console.log($("#myAccount_list"));
+		$("#map_list").css("display","block").addClass("account");
+		$(this).addClass("account");
+	},function(){
+		$("#map_list").css("display","none");
+		$(this).removeClass("account");
+	})
+	$("#map_list").on("mouseenter","li",function(){
+		$("#map_list").css("display","block").addClass("account");
+		$("#map").addClass("account");
+	})
+	$("#map_list").on("mouseleave","li",function(){
+		$("#map_list").css("display","none");
+		$("#map").removeClass("account");
+	})
+	
 	// banner 左侧菜单数据
 	var menu_left_str = "";
 	$.ajax({
