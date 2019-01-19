@@ -1,0 +1,39 @@
+html,body{height: 100%;background: #fff;}
+.login_bg .logo{background: url(../images/login/login_logo.jpg) no-repeat;width: 167px;height: 95px;display: block;}
+.login_main{height: 465px;background: url(../images/login/bg.jpg);}
+.login_bg{position: relative; height: 465px;width: 950px;background: url(../images/login/login_bg.jpg);margin: 0 auto;}
+#login_div{position: absolute; right: 176px; top: 70px; width: 330px;height: 354px;background: #fff;border: 2px solid #EEDFBA;display: none;}
+#login_div #title{width: 330px;height: 31px;background: url(../images/login/titleBG.png);}
+#login_div #title h3{font-size: 16px;color: #666;line-height: 30px;margin-left: 14px;}
+#login_form .form_title{margin: 10px auto; height: 30px;width: 296px;border: 1px solid #ccc;line-height: 30px;font-size: 12px;padding-left: 10px;background: #FAFAFA;}
+#login_form form{height: 160px;width: 308px;border-bottom: 1px dashed black ;margin: 10px auto;}
+#login_form form p{margin: 0 auto;width: 280px;line-height: 30px;}
+#login_form form p span{font-size: 12px;}
+#login_form form p a{font-size: 12px;}
+#login_form form p a:hover{color: red;}
+#login_form form p input{width: 208px;height: 24px;border: 1px solid #ccc;margin-left: 10px;padding-left: 4px;outline: none;}
+#login_form form p #submit_login{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;margin-left: 60px;margin-top: 8px;color: lavenderblush;}
+#login_form form p #submit_register{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;color: lavenderblush;}
+.form_foot {margin-top: 24px;}
+.form_foot span{background: url(https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=3528894059,640966735&fm=58);width: 16px;height: 16px;float: left;margin-left: 32px;}
+.form_foot a{float: left;font-size: 14px;line-height: 16px;}
+
+
+/* 注册 */
+#register_div{width: 552px;height: 437px;position: absolute; right: 0; bottom: 0; background: #fff;border: 2px solid #EEDFBA;display: none;}
+#register_div #title{width: 552px;height: 31px;background: url(../images/login/titleBG.png);}
+#register_div #title h3{font-size: 16px;color: #666;line-height: 30px;margin-left: 14px;}
+#register_form .form_title{margin: 10px auto; height: 30px;width: 532px;border: 1px solid #ccc;line-height: 30px;font-size: 12px;padding-left: 10px;background: #FAFAFA;color: red;}
+
+#register_form form{height: 160px;width: 532px;margin: 10px auto;}
+#register_form form p{margin: 0 auto;width: 532pxpx;line-height: 30px;}
+#register_form form p span{font-size: 12px;}
+#register_form form p a{font-size: 12px;}
+#register_form form p a:hover{color: red;}
+#register_form form p input{width: 208px;height: 24px;border: 1px solid #ccc;margin-left: 10px;padding-left: 4px;outline: none;}
+#register_form form p #submit_login{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;margin-left: 60px;margin-top: 12px;color: lavenderblush;}
+#register_form form p #submit_register{width: 80px;height: 35px;background: skyblue;border-radius: 5px;border: none;color: lavenderblush;}
+.yzm span{font-weight: bold;font-style: italic;display: inline-block;width: 50px;height: 24px;border: 1px solid black;line-height: 24px;text-align: center;background:#C0C0C0;margin: 10px;}
+
+
+.show{display: block !important;}
