@@ -29,7 +29,7 @@ window,onload = function(){
 	window.onscroll = function(){
 		//获取页面滚走的距离
 		var sTop = document.documentElement.scrollTop || document.body.scrollTop;
-		console.log(sTop);
+		// console.log(sTop);
 		var h = 140;
 		if( sTop > h ){
 			nav.style.position = "fixed";
