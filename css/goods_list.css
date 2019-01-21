@@ -1,3 +1,4 @@
+body{background: #fff;}
 .main_map{width: 1200px;height: 31px;border-bottom: 1px solid #9A9A9A;margin: 0 auto;font-size: 12px;color: #9A9A9A;line-height: 31px;margin-bottom: 10px;}
 .main_map p {margin-left: 10px;}
 .main_map p a{color: #9A9A9A;}
@@ -6,12 +7,23 @@
 
 .content{width: 1200px;overflow: hidden;margin: 0 auto;}
 
-.main_left{float: left; width: 230px;height: 1640px;background: #008080;}
+.main_left{float: left; width: 230px;/*height: 1640px; background: #F1F1F1; */}
+.main_left .main_left_top{width: 228px;border: 1px solid #C0C0C0;}
+/* .type_list{} */
+.type_list h3{font-size: 16px;color: #9A9A9A; width: 208px;height: 43px;background: url(../images/goods_list/20130225rect5.png) no-repeat;line-height: 43px;margin: 0 auto;padding-left: 10px;}
+.type_list h3 span{float: right;width: 16px;height: 16px;background: url(../images/goods_list/plus_img.png);
+					margin: 12px;}
+.type_list ul{width: 212px;margin: 0 auto;font-size: 12px;background: #fff;margin-left: 6px;overflow: hidden;display: none;}
+.type_list ul li{margin: 0 45px 0px 30px;float: left;}
+.type_list ul li a{color: #333333;}
+.type_list ul li a:hover{color: red;}
+.type_list_ul_show{display: block !important;}
+.type_list_ul_showno{display: none !important;}
 
-.main_right{float: left;width: 960px;margin-left: 10px;}
-.main_right .hot_pro{width: 960px;height: 201px;}
+.main_right{float: left;width: 958px;margin-left: 10px;}
+.main_right .hot_pro{width: 958px;height: 201px;margin-bottom: 10px;border: 1px solid #9A9A9A;border-top: 2px solid red;}
 .main_right .hot_pro h3{color: #c7012c;font-size: 16px; height: 38px;line-height: 38px; padding-left: 20px; background: #F1F1F1;}
-.main_right .hot_pro ul{width: 960px;height: 161px;border: 1px solid #9A9A9A;border-top: 2px solid red;}
+.main_right .hot_pro ul{width: 958px;height: 161px;}
 .main_right .hot_pro ul .hot_pro_li{width: 300px;height: 160px;margin-right: 15px;}
 	.hot_pro_li .hot_pro_li_div{width: 170px;height: 160px;float: left;}
 	.hot_pro_li_div .hot_img{width: 130px;height: 130px;background: url(../images/goods_list/hot_pro_img.jpg);display: inline-block;margin: 14px 20px;}
@@ -20,3 +32,33 @@
 	.hot_pro_li ol li span{color: red;font-size: 24px;}
 	.hot_pro_li ol li .hot_pro_btn{width: 67px;height: 27px;display: block;background: red;border-radius: 2px;line-height: 27px;text-align: center;font-size: 14px;color: #fff;}
 	
+/* 过滤条件 */
+.fth_filter{width: 958px;height: 227px;border: 1px solid #9A9A9A;border-top: 2px solid red;margin-bottom: 10px;}
+.fth_filter_title{width: 956px;height: 38px;}
+.fth_filter_title h3{color: #c7012c;font-size: 16px; height: 38px;line-height: 38px; padding-left: 20px; background: #F1F1F1;}
+.fth_filter_item{width: 358px;height: 40px;border-bottom: 1px dashed;line-height: 40px;}
+.fth_filter_item span{float: left;font-size: 16px;font-weight: bold;margin: 0 10px;}
+.fth_filter_item:last-child{border: none;}
+.fth_filter_item ul{float: left;font-size: 14px;}
+.fth_filter_item ul li{float: left;margin: 0 10px;}
+
+.fth_listCon{width: 958px;border: 1px solid #9A9A9A;border-top: 2px solid red;}
+.fth_listCon_title{width: 956px;}
+.fth_listCon_title h3{color: #c7012c;font-size: 16px; height: 38px;line-height: 38px; padding-left: 20px; background: #F1F1F1;}
+
+.fth_listCon_info{width: 958px;}
+.fth_listCon_info ul{overflow: hidden;margin-top: 10px;}
+.ui_pro{width:170px;height: 346px;margin: 0 10px 10px;float: left;}
+.ui_pro .ui_pimg{position: relative;width: 170px;height: 170px;}
+.ui_pro .ui_pimg a img{position: absolute;left: 0;top: 0;left: 0;right: 0;margin: auto;}
+
+.ui_pattribute p{width: 164px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;font-size: 12px;}
+.ui_pattribute a{font-size: 12px;}
+.ui_pattribute span{color: #FFC400;}
+#ui_pattribute_price{margin-top: 16px;}
+#ui_pattribute_price span{font-size: 20px;color: orangered;}
+#ui_pattribute_comment{overflow: hidden;}
+#ui_pattribute_comment li{float: left;color: greenyellow;}
+#addcard_buy{margin: 10px 0;}
+#addcard_buy a{float: left;padding: 2px 5px;margin-left:8px;background: yellowgreen;border-radius: 3px;}
+

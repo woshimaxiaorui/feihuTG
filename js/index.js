@@ -55,7 +55,7 @@ window.onload = function(){
 		success:function(res){
 			if(res){
 				$.each(res,function(key){
-					menu_left_str += "<li><span class='iconfont'>"+ key +"</span><a href=''>"+ res[key] +"</a></li>";
+					menu_left_str += "<li><span class='iconfont'>"+ key +"</span><a href='goods_list.html'>"+ res[key] +"</a></li>";
 				})
 				$(".menu_left").find("ul").html(menu_left_str);
 			}else{
