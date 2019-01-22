@@ -11,10 +11,26 @@ window.onload = function(){
 		$('a[href|="index.html"]').attr("href","index.html?uname="+utxt);
 	}
 	
-	
+	// 初始化购物车中的商品数量
+	initCartGoodsNum();
+	function initCartGoodsNum(){
+		// alert(1);
+		var str = getCookieUtil("GoodsList");
+		if(str == ""){
+			return;
+		}
+		var json = JSON.parse(str);
+		var arr = [];
+		for( obj of json){
+			// console.log(obj)
+			arr.push(obj.number);
+		}
+		$("#cardGoodsNum").html(eval(arr.join("+")));
+		$("#cardGoodsNum").css("color","red")
+	}
 	
 	$("#myAccount").hover(function(){
-		console.log($("#myAccount_list"));
+		// console.log($("#myAccount_list"));
 		$("#myAccount_list").css("display","block").addClass("account");
 		$(this).addClass("account");
 	},function(){

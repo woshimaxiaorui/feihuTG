@@ -35,7 +35,7 @@ body{background: #FAFAFA;}
 	0{top: 0;}
 	100%{top: 6px;}
 }
-.nav .main_bg .right_car{float: left; width: 180px; height: 24px;margin-left:466px;line-height: 40px;padding-top: 10px;}
+.nav .main_bg .right_car{float: left; width: 196px; height: 24px;margin-left:450px;line-height: 40px;padding-top: 10px;}
 .nav .main_bg .right_car span{font-size: 16px;}
 .nav .main_bg .right_car .car{float: left; font-size: 14px;color: #000000;height: 24px;background: #fff;border-radius: 5px 0 0 5px;padding: 0px 15px;line-height: 24px;}
 .nav .main_bg .right_car .settle{float: left; width: 70px;height: 24px;background: #FFDE00;font-size: 14px;color: #000000;text-align: center;line-height: 24px;border-radius: 0 5px 5px 0;}

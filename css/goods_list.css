@@ -60,5 +60,6 @@ body{background: #fff;}
 #ui_pattribute_comment{overflow: hidden;}
 #ui_pattribute_comment li{float: left;color: greenyellow;}
 #addcard_buy{margin: 10px 0;}
-#addcard_buy a{float: left;padding: 2px 5px;margin-left:8px;background: yellowgreen;border-radius: 3px;}
+#addcard_buy a{float: left;padding: 2px 5px;margin-left:8px;background: yellowgreen;border-radius: 3px;color: #fff;}
+#addcard_buy a:hover {color: darkgoldenrod;}
 

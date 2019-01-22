@@ -7,20 +7,38 @@ window,onload = function(){
 							   .prop("show",true);
 	}
 	
+	// 初始化购物车中的商品数量
+	initCartGoodsNum();
+	function initCartGoodsNum(){
+		var str = getCookieUtil("GoodsList");
+		if(str == ""){
+			return;
+		}
+		var json = JSON.parse(str);
+		
+		var arr = [];
+		for( obj of json){
+			// console.log("对象",obj);
+			new ObjCard().goodsList.push(obj);
+			arr.push(obj.number);
+		}
+		$("#cardGoodsNum").html(eval(arr.join("+")));
+		$("#cardGoodsNum").css("color","red")
+	}
+	
 	$(".type_list").on("click","span",function(){
-		console.log($(this).parent().next())
+		// console.log($(this).parent().next())
 		if($(this).prop("show")){
-			console.log($(this).prop("show"))
+			// console.log($(this).prop("show"))
 			$(this).css("background","url(images/goods_list/plus_img.png)");
 			$(this).parent().css("color","#9a9a9a").next().removeClass("type_list_ul_show"); 
 			$(this).prop("show",false);
 		}else{
-			console.log(222,$(this).prop("show"))
+			// console.log(222,$(this).prop("show"))
 			$(this).css("background","url(images/goods_list/minus_img.png)");
 			$(this).parent().css("color","red").next().addClass("type_list_ul_show"); 
 			$(this).prop("show",true);
 		}
-		
 		
 	})
 	

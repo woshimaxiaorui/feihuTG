@@ -71,7 +71,7 @@ window.onload = function(){
 	
 	var flagRegisterYz = null;
 	$("#register_yz").blur(function(){
-		console.log(getYz())
+		// console.log(getYz())
 		var txt = $(this).val();
 		//验证码是否匹配
 		var txt2 = $(".yzm span").html();
@@ -106,7 +106,7 @@ window.onload = function(){
 		if( flagRegisterUname && flagRegisterUpass &&flagRegisterUpass2&&flagRegisterUemail && flagRegisterYz){
 			var uname = $("#register_uname").val();
 			var upass = $("#register_upass").val();
-			console.log(uname,upass)
+			// console.log(uname,upass)
 			setCookieUtil(uname, upass);
 			location.href = "login.html";
 		}
