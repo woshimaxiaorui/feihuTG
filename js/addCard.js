@@ -1,5 +1,6 @@
 //  添加购物车模块 作者：MR （ 面向对象方式实现 ）
 function goodsDataAddCart(obj, index) {
+	
 	var oGoodsTemp = null;
 	var oCard = new ObjCard();
 	if (index == "1" || index == "2") {
@@ -32,7 +33,9 @@ function goodsDataAddCart(obj, index) {
 		oCard.setCookie();
 	}
 	if(index == "2"){
-		location.href = "settlement.html";
+		var txt = obj.attr("uname");
+		console.log(txt)
+		location.href = "settlement.html?uname="+txt;
 	}
 }
 // 添加购物车动画
